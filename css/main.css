@@ -1,0 +1,459 @@
+body{
+font-family: 'Anton', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+.height{
+    min-height: 100vh;
+}
+.title-underline{
+    width: 100px;
+    height: 5px;
+    margin: 0 auto;
+    /* background: blue!important;*/
+}
+.height-80{
+    min-height: 80vh;
+}
+
+.about-picture{
+    background: url(../img/about.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#filler,#progress,#header1{
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../img/mjcet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#filler1{
+ background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../img/racei_press.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* NAVIGATION 
+nav {
+    width: 100%;
+    margin: 0 auto;
+    background: #5bc0de;
+    padding: 5px 0;
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #555;
+  } */
+  
+  
+  /* SHIFT */
+  nav.shift ul li a {
+    position:relative;
+    z-index: 1;
+  }
+  nav.shift ul li a:hover {
+    color: #91640F;
+  }
+  nav.shift ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #fff;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  .back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+
+
+.card-img-top {
+width: 100%;
+height: 40vh;
+object-fit: cover;
+}
+
+
+/*SLIDER*/
+
+#slider-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#image-slider .carousel-inner img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.container {
+  z-index: 10; /* Ensures content appears above the images */
+}
+
+.carousel-inner {
+  z-index: 0; /* Ensures images stay behind the content */
+}
+
+
+
+
+
+/* Technical Co-Sponsors Section */
+.tech-sponsors {
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.tech-sponsors .title-underline {
+    width: 80px;
+    height: 4px;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Sponsor Box */
+.sponsor-box {
+    background: #ffffff;
+    width: 100%;
+    height: 170px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Make the complete link fit inside the box */
+.sponsor-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* Responsive Logo Images */
+.sponsor-box img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Hover Effect */
+.sponsor-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablets */
+@media (max-width: 767px) {
+    .sponsor-box {
+        height: 150px;
+        padding: 18px;
+    }
+
+    .sponsor-box img {
+        max-width: 100%;
+        max-height: 110px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 400px) {
+    .sponsor-box {
+        height: 135px;
+        padding: 12px;
+    }
+
+    .sponsor-box img {
+        max-width: 100%;
+        max-height: 105px;
+    }
+
+    .tech-sponsors h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+.countdown-box h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.countdown-box p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Optional: spacing + style */
+#countdown div {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 70px;
+}
+
+
+/* Partner Logos */
+#logo-all .partner-logo {
+    max-height: 90px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+#logo-all .partner-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    #logo-all .partner-logo {
+        max-height: 75px;
+    }
+}
+
+
+
+
+/* ===== Header Background ===== */
+#main-header {
+    background-color: #ffffff !important;
+}
+
+/* Keep header elements on a white background */
+#main-header .header-layout,
+#main-header nav.navbar {
+    background-color: #ffffff !important;
+}
+
+/* ===== Increase Logo Size ===== */
+#main-header .header-layout {
+    grid-template-columns: 145px minmax(0, 1fr) 145px;
+    padding: 10px 20px;
+    gap: 12px;
+}
+
+#main-header .header-logo img {
+    height: 85px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ===== Navigation Links ===== */
+#main-header .navbar-nav .nav-link {
+    color: #000000 !important;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 10px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover and Active Link */
+#main-header .navbar-nav .nav-link:hover,
+#main-header .navbar-nav .nav-item.active > .nav-link,
+#main-header .navbar-nav .nav-link:focus {
+    background-color: #17a2b8 !important;
+    color: #ffffff !important;
+}
+
+/* ===== Dropdown Menu ===== */
+#main-header .dropdown-menu {
+    background-color: #ffffff !important;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+#main-header .dropdown-menu .dropdown-item {
+    color: #000000 !important;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+#main-header .dropdown-menu .dropdown-item:hover,
+#main-header .dropdown-menu .dropdown-item:focus {
+    background-color: #17a2b8 !important;
+    color: #ffffff !important;
+}
+
+/* ===== Mobile and Tablet ===== */
+@media (max-width: 1199.98px) {
+    #main-header .header-layout {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 15px;
+    }
+
+    #main-header .header-logo img {
+        height: 70px;
+    }
+
+    #main-header nav.navbar {
+        background-color: #ffffff !important;
+    }
+
+    #main-header .navbar-toggler {
+        border-color: #777777;
+        margin: 8px auto;
+    }
+
+    #main-header .navbar-toggler-icon {
+        filter: none;
+    }
+
+    #main-header .navbar-nav .nav-link {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+}
+
+/* ===== Small Mobile Screens ===== */
+@media (max-width: 575.98px) {
+    #main-header .header-layout {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    #main-header .header-logo img {
+        height: 55px;
+        max-width: 145px;
+    }
+}
+
+/* ===== Force Header into One Horizontal Row ===== */
+
+@media (min-width: 1200px) {
+
+    #main-header .header-layout {
+        display: grid !important;
+        grid-template-columns: 115px minmax(0, 1fr) 115px !important;
+        grid-template-rows: auto !important;
+        align-items: center;
+        flex-wrap: nowrap !important;
+        gap: 5px;
+        padding: 8px 12px;
+    }
+
+    #main-header .left-logo {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        justify-content: center;
+    }
+
+    #main-header nav.navbar {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        min-width: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #main-header .right-logo {
+        grid-column: 3 !important;
+        grid-row: 1 !important;
+        justify-content: center;
+    }
+
+    #main-header .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto !important;
+        min-width: 0;
+        justify-content: center;
+    }
+
+    #main-header .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    #main-header .navbar-nav .nav-link {
+        font-size: 16px;
+        padding: 12px 5px;
+        white-space: nowrap;
+    }
+
+    #main-header .header-logo img {
+        height: 75px;
+        max-width: 110px;
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+
